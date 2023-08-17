@@ -8,20 +8,16 @@ function Form() {
         juegoFavorito: ''
     })
 
-    const [error, setError] = useState(false)
-
     const [mensaje, setMensaje] = useState('')
 
     const handleSubmit = () => {
         if( (persona.nombre.length > 3 && !persona.nombre.startsWith(" ")) && persona.juegoFavorito.length >= 6 ) {
-            setError(false)
             setMensaje(`
             Hola, ${persona.nombre}!
 
             Tu juego favorito es: ${persona.juegoFavorito}
             `)
         } else {
-            setError(true)
             setMensaje('Por favor chequea que la información sea correcta')
         }
     }

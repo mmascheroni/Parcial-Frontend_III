@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-function Card() {
+function Card({ mensaje }) {
+    
+
     return (
-        <div>Card</div>
+        <div>
+            <h4>{mensaje}</h4>
+        </div>
     )
 }
 
